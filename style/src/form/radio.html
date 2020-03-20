@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>radio</title>
+    <link rel="stylesheet" href="../style.lib.css" />
+    <style>
+      .label-pseudo {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+      }
+      .radio:checked + span > .label-pseudo {
+        border-color: red;
+      }
+      .radio:checked + span > .label-text::after {
+        content: '::after';
+      }
+    </style>
   </head>
-  <body>
-    <input type="radio" />
+  <body class="usn">
+    <form>
+      <p>radio</p>
+      <input type="radio" />
+      <p>pseudo</p>
+      <input type="radio" id="radio1" name="radio" class="radio" hidden />
+      <span>
+        <label for="radio1" class="label-pseudo"></label>
+        <label for="radio1" class="label-text">label text</label>
+      </span>
+      <br />
+      <input type="radio" id="radio2" name="radio" class="radio" hidden />
+      <span>
+        <label for="radio2" class="label-pseudo"></label>
+        <label for="radio2" class="label-text">label text</label>
+      </span>
+      <p>reset</p>
+      <input type="reset" value="reset" />
+    </form>
   </body>
 </html>
