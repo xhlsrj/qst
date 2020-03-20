@@ -12,10 +12,10 @@
         height: 10px;
         border: 1px solid #000;
       }
-      .radio:checked + span > .label-pseudo {
+      .radio:checked + div > .label-pseudo {
         border-color: red;
       }
-      .radio:checked + span > .label-text::after {
+      .radio:checked + div > .label-text::after {
         content: '::after';
       }
     </style>
@@ -26,16 +26,15 @@
       <input type="radio" />
       <p>pseudo</p>
       <input type="radio" id="radio1" name="radio" class="radio" hidden />
-      <span>
+      <div>
         <label for="radio1" class="label-pseudo"></label>
         <label for="radio1" class="label-text">label text</label>
-      </span>
-      <br />
+      </div>
       <input type="radio" id="radio2" name="radio" class="radio" hidden />
-      <span>
+      <div>
         <label for="radio2" class="label-pseudo"></label>
         <label for="radio2" class="label-text">label text</label>
-      </span>
+      </div>
       <p>reset</p>
       <input type="reset" value="reset" />
     </form>
