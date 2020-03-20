@@ -4,8 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>text</title>
+    <link rel="stylesheet" href="../style.lib.css" />
+    <style>
+      .plain {
+        border: none;
+        outline: none;
+      }
+      .w100p {
+        width: 100%;
+      }
+      .box {
+        border: 1px solid #000;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
+    <p>reference</p>
     <input type="text" />
+    <p>plain</p>
+    <div class="box">
+      <input type="text" class="plain w100p" />
+    </div>
   </body>
 </html>
