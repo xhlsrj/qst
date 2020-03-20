@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "Apache License",
+  "scripts": {
+    "dev": "node server/index.js"
+  },
   "dependencies": {
     "koa": "^2.11.0",
     "koa-static": "^5.0.0"
