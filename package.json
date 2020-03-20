@@ -1,0 +1,8 @@
+{
+  "name": "qst",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xhlsrj/qst.git",
+  "author": "xh",
+  "license": "Apache License"
+}
