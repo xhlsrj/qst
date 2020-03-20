@@ -105,6 +105,6 @@ dist
 
 
 
-# lock
+# lockfile
 package.lock
 yarn.lock
