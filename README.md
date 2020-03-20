@@ -1,2 +1,2 @@
 # qst
-some quick start templates
+Some quick-start templates for elements, page, and so on.
