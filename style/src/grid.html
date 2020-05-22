@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <link rel="stylesheet" href="style.lib.css" />
+  </head>
+  <body>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid lightgray;
+        background-color: gray;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 1px;
+      }
+      .item {
+        background-color: #fff;
+      }
+      .item:first-of-type {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+      }
+    </style>
+    <div class="box grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <!-- / -->
+    <br />
+    <style>
+      .block {
+        width: 300px;
+        height: 100px;
+        grid-template-columns: 100px 1fr;
+      }
+      .fixed,
+      .fill {
+        background-color: #fff;
+        border: 1px solid gray;
+      }
+      .wide-box {
+        width: 400px;
+        height: 100%;
+        border: 5px solid lightblue;
+      }
+      .mw-0 {
+        min-width: 0;
+      }
+    </style>
+    <div class="grid block">
+      <div class="fixed"></div>
+      <div class="fill ellipsis">
+        qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghhjklzxvbnmqwertyuiop
+      </div>
+    </div>
+    <br />
+    <div class="grid block">
+      <div class="fixed"></div>
+      <div class="fill">
+        <div class="wide-box bzb"></div>
+      </div>
+    </div>
+    <br />
+    <div class="grid block">
+      <div class="fixed"></div>
+      <div class="fill mw-0">
+        <div class="wide-box bzb"></div>
+      </div>
+    </div>
+    <!-- / -->
+    <br />
+    <style>
+      .table {
+        width: 400px;
+        /* grid-template-columns: 100px 1fr 100px; */
+        /* grid-template-columns: 1fr 200px 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+        /* row-gap: 10px; */
+        /* column-gap: 50px; */
+        gap: 10px 50px;
+        border: 1px solid gray;
+      }
+      .cell-content {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+    <div class="grid table">
+      <div class="flex-hcenter">
+        <div class="cell-content bzb"></div>
+      </div>
+      <div class="flex-hcenter">
+        <div class="cell-content bzb"></div>
+      </div>
+      <div class="flex-hcenter">
+        <div class="cell-content bzb">
+          <div style="width: 300px; border: 1px solid #000;">xxx</div>
+        </div>
+      </div>
+      <div class="flex-hcenter">
+        <div class="cell-content bzb"></div>
+      </div>
+      <div class="flex-hcenter">
+        <div class="cell-content bzb"></div>
+      </div>
+    </div>
+  </body>
+</html>

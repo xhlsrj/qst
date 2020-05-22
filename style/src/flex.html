@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <link rel="stylesheet" href="style.lib.css" />
+  </head>
+  <body>
+    <style>
+      .box {
+        width: 600px;
+      }
+      .side {
+        border: 1px solid lightgray;
+        flex-grow: 1;
+      }
+      .content {
+        padding: 10px;
+      }
+    </style>
+    <div class="box flex">
+      <div class="side"></div>
+      <div class="content">content</div>
+      <div class="side"></div>
+    </div>
+    <!-- / -->
+    <br />
+    <style>
+      .table {
+        width: 500px;
+        background-color: lightgray;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .cell {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+    </style>
+    <div class="flex table">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <!-- / -->
+    <br />
+    <style>
+      .block,
+      .left,
+      .right {
+        border: 1px solid gray;
+        height: 100px;
+        box-sizing: border-box;
+      }
+      .block {
+        width: 300px;
+      }
+      .left {
+        /* min-width: 200px; */
+        width: 200px;
+      }
+      .right {
+        /* min-width: 0; */
+        flex-grow: 1;
+      }
+      .wide-box {
+        width: 400px;
+        height: 100%;
+        border: 5px solid lightblue;
+      }
+    </style>
+    <div class="flex block">
+      <div class="left"></div>
+      <div class="right ellipsis">
+        qwyui opa sdf hjkzx cvbm,st yukxcvbn msfv gbhnjw ert yuisdf gqwyu
+      </div>
+    </div>
+    <br />
+    <div class="flex block">
+      <div class="left"></div>
+      <div class="right">
+        <div class="wide-box bzb"></div>
+      </div>
+    </div>
+    <!-- / -->
+    <br />
+    <style>
+      .outter-box {
+        border: 1px solid #000;
+        height: 300px;
+      }
+      .content-box {
+        border: 1px solid #000;
+        height: 200px;
+      }
+      .inner-box {
+        border: 1px solid #000;
+        width: 75%;
+        height: 100px;
+      }
+    </style>
+    <div class="flex-hcenter content-box">
+      <div class="inner-box"></div>
+    </div>
+    <br />
+    <div class="flex-vcenter outter-box">
+      <div class="flex-hcenter content-box">
+        <div class="inner-box"></div>
+      </div>
+    </div>
+    <br />
+    <div class="flex-vcenter outter-box">
+      <div class="content-box"></div>
+    </div>
+  </body>
+</html>

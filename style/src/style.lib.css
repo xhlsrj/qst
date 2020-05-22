@@ -1,10 +1,18 @@
 /* text */
 .bold {
-  /* font-weight: 700; */
   font-weight: bold;
+}
+.tal {
+  text-align: left;
 }
 .tac {
   text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.vat {
+  vertical-align: top;
 }
 .vam {
   vertical-align: middle;
@@ -17,20 +25,20 @@
   position: relative;
 }
 /* layout */
-.dib {
-  display: inline-block;
-}
-.df {
-  display: flex;
-}
-.dg {
-  display: grid;
+.vh {
+  visibility: hidden;
 }
 .dn {
   display: none;
 }
-.vh {
-  visibility: hidden;
+.dib {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
 }
 /* dimension */
 .mauto {
@@ -46,4 +54,37 @@
 }
 .bzb {
   box-sizing: border-box;
+}
+/* combination text */
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* combination layout */
+.flex-hcenter {
+  display: flex;
+  justify-content: center;
+}
+.flex-vcenter {
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col-hcenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-jcsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-jcse {
+  display: flex;
+  justify-content: space-evenly;
 }
