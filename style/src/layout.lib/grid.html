@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout.lib</title>
+    <link rel="stylesheet" href="/style.lib.css" />
+    <style>
+      body {
+        font-family: 'Fira Code', 'Consolas';
+        padding: 1vh 10vw 10vh;
+      }
+      .box {
+        width: 400px;
+        border: 1px solid lightgray;
+      }
+      .bar {
+        box-sizing: border-box;
+        height: 100px;
+        border: 1px solid lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>grid</h1>
+    <h2>two items</h2>
+    <h3>grid-template-columns: calc</h3>
+    <div
+      class="box grid"
+      style="grid-template-columns: 100px calc(100% - 100px);"
+    >
+      <div class="bar"></div>
+      <div class="bar">calc(100% - 100px)</div>
+    </div>
+    <br />
+    <div
+      class="box grid"
+      style="grid-template-columns: calc(100% - 100px) 100px;"
+    >
+      <div class="bar">calc(100% - 100px)</div>
+      <div class="bar"></div>
+    </div>
+    <!-- / -->
+    <h2>three items</h2>
+  </body>
+</html>

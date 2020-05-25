@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout.lib</title>
+    <link rel="stylesheet" href="/style.lib.css" />
+    <style>
+      body {
+        font-family: 'Fira Code', 'Consolas';
+        padding: 1vh 10vw 10vh;
+      }
+      .box {
+        width: 400px;
+        height: 200px;
+        border: 1px solid lightgray;
+      }
+      .bar,
+      .rect {
+        box-sizing: border-box;
+        height: 100px;
+        border: 1px solid lightblue;
+      }
+      .rect {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex</h1>
+    <h2>one item</h2>
+    <!-- / -->
+    <h3>flex-hcenter</h3>
+    <div class="box flex-hcenter">
+      <div class="bar"></div>
+    </div>
+    <br />
+    <div class="box flex-hcenter">
+      <div class="rect"></div>
+    </div>
+    <!-- / -->
+    <h3>flex-vcenter</h3>
+    <div class="box flex-vcenter">
+      <div class="bar"></div>
+    </div>
+    <br />
+    <div class="box flex-vcenter">
+      <div class="rect"></div>
+    </div>
+    <!-- / -->
+    <h3>flex-center</h3>
+    <div class="box flex-center">
+      <div class="bar"></div>
+    </div>
+    <br />
+    <div class="box flex-center">
+      <div class="rect"></div>
+    </div>
+    <!-- / -->
+    <h2>two items</h2>
+    <h3>flex-jcsb</h3>
+    <div class="box flex-jcsb">
+      <div class="rect"></div>
+      <div class="rect"></div>
+    </div>
+    <!-- / -->
+    <h2>three items</h2>
+    <h3>flex-grow</h3>
+    <style>
+      .fg1 {
+        flex-grow: 1;
+      }
+    </style>
+    <div class="box flex">
+      <div class="bar fg1">flex-grow: 1;</div>
+      <div class="bar">bar</div>
+      <div class="bar fg1">flex-grow: 1;</div>
+    </div>
+  </body>
+</html>

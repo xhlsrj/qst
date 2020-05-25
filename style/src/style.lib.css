@@ -80,6 +80,10 @@
   flex-direction: column;
   align-items: center;
 }
+.flex-jcfe {
+  display: flex;
+  justify-content: flex-end;
+}
 .flex-jcsb {
   display: flex;
   justify-content: space-between;
