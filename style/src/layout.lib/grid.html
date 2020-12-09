@@ -27,20 +27,23 @@
     <h3>grid-template-columns: calc</h3>
     <div
       class="box grid"
-      style="grid-template-columns: 100px calc(100% - 100px);"
+      style="grid-template-columns: calc(100% - 100px) auto"
     >
-      <div class="bar"></div>
       <div class="bar">calc(100% - 100px)</div>
+      <div class="bar">auto</div>
     </div>
+    <!-- / -->
     <br />
-    <div
-      class="box grid"
-      style="grid-template-columns: calc(100% - 100px) 100px;"
-    >
-      <div class="bar">calc(100% - 100px)</div>
-      <div class="bar"></div>
+    <div class="box grid" style="grid-template-columns: 100px auto">
+      <div class="bar">100px</div>
+      <div class="bar">auto</div>
     </div>
     <!-- / -->
     <h2>three items</h2>
+    <div class="box grid" style="grid-template-columns: 100px auto 100px">
+      <div class="bar">100px</div>
+      <div class="bar">auto</div>
+      <div class="bar">100px</div>
+    </div>
   </body>
 </html>
